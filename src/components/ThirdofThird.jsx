@@ -16,10 +16,10 @@ import {
 import {Class} from '@material-ui/icons'
 const useStyles = makeStyles((theme) => ({
   background: {
-  backgroundColor: "#fff"
+  // backgroundColor: "#fff"
   },
   container: {
-    backgroundColor: "#fff",
+    // backgroundColor: "#fff",
     borderColor: "#B4E0E0",
   },
   hover: {
