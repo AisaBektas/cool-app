@@ -17,10 +17,11 @@ const useStyles = makeStyles((theme) => ({
     // background: `url(${background})`,
   // backgroundRepeat: "no-repeat",
   // backgroundSize: "600px",
-  background: `url(${background}) no-repeat center`, 
-  backgroundSize: "cover",
-  height: "600px",
+  // background: `url(${background}) no-repeat center`, 
+  // backgroundSize: "cover",
+  height: "100vh",
   // position: "relative"
+   background: `linear-gradient(to top, rgba(255,255,255,255) 30%, transparent 10%, rgba(7, 31, 58, 0.9)), url(${background})`,
   },
   container: {
     paddingTop: "8%",
@@ -32,21 +33,21 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: "3%",
   },
   size: {
-    height: "75vh",
+    height: "70vh",
     backgroundColor: "#ddd"
   },
   image: {
     minWidth: "100%",
     maxHeight: "565px"
   },
-  main: {
-    height: "110vh"
-  }
+  // main: {
+  //   height: "110vh"
+  // }
   }));
 const SecondofThird = () => {
     const classes = useStyles();
     return ( 
-      <div className={classes.main}>
+      // < className={classes.main}>
         <div className={classes.background}>
         <React.Fragment>
       <CssBaseline />
@@ -59,19 +60,17 @@ const SecondofThird = () => {
         </Grid>
         <Grid container item lg={12} className={classes.size}>
           <Grid container item lg={6} xs={12}>
-          <img className={classes.image} src={left}/>
+          {/* <img className={classes.image} src={left}/> */}
           </Grid>
           <Grid container item lg={6} xs={12}>
-        <img className={classes.image}
-          src={right}
-        />
+        {/* <img className={classes.image} src={right}/> */}
           </Grid>
         </Grid>
       </Grid>
       </Container>
     </React.Fragment>
 </div>
-</div>
+// </
      );
 }
  

@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { AppBar, Toolbar, Tooltip, Typography, Button, Box} from '@material-ui/core';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { Link } from "react-router-dom";
-import logo from "../assets/Logo.png";
+import logo from "../assets/Company.png";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,

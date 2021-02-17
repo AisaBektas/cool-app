@@ -13,12 +13,11 @@ import {
     import hexagon from "../assets/hexfinally.png"
 const useStyles = makeStyles((theme) => ({
   background: {
-    // height: "80vh",
-    backgroundImage: `url(${background})`,
+     background: `linear-gradient(to top, rgba(7, 31, 58, 0.9), transparent 100%, rgba(7, 31, 58, 0.9)), url(${background})`,
+    // backgroundImage: `url(${background})`,
   },
   container: {
     paddingTop: "8%",
-    // paddingBottom: "10%",
   },
     titleColor: {
     color: "#fff",
@@ -35,7 +34,6 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: "6%",
     paddingLeft: "6%",
     paddingTop: "6%",
-    //  paddingBottom: "8%"
   }
   }));
 const FirstofThird = () => {

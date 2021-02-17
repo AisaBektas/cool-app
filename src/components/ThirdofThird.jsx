@@ -9,17 +9,12 @@ import {
   Box
  } 
   from '@material-ui/core';
-    import hexagon from "../assets/hexfinal.png"
-    import first from '../assets/first.png';
-    import second from '../assets/second.png';
-    import third from '../assets/third.png';
-import {Class} from '@material-ui/icons'
+  import icon from '../assets/Thirdicon.png';
 const useStyles = makeStyles((theme) => ({
   background: {
-  // backgroundColor: "#fff"
+  backgroundColor: "#fff"
   },
   container: {
-    // backgroundColor: "#fff",
     borderColor: "#B4E0E0",
   },
   hover: {
@@ -42,23 +37,23 @@ const useStyles = makeStyles((theme) => ({
     color: "#394357",
     paddingRight: "6%",
     paddingLeft: "6%",
-    paddingTop: "6%",
   },
   paragraph: {
     color: "#17A4A4",
     maxWidth: "50%",
-    marginTop: "5%" 
+    marginTop: "5%",
+    paddingBottom: "4%" 
 },
 top: {
   paddingTop: "8%"
 },
 iconspc: {
   position: "relative",
-   top: "-45px",
+   top: "-40px",
 },
 iconspca: {
   position: "relative",
-   top: "-35px",
+   top: "-30px",
 }
   }));
 const ThirdofThird = () => {
@@ -78,7 +73,7 @@ const ThirdofThird = () => {
             <Grid container lg={12}>
         <Grid container item lg={4} md={4} sm={12} direction="row" justify="center" alignItems="flex-end">
         <Grid container item lg={12} md={12} sm={12} direction="row" justify="center" alignItems="flex-start">
-              <img src={first} className={classes.iconspc}></img>
+              <img src={icon} className={classes.iconspc}></img>
               </Grid>
           <Box className={`${classes.container} ${classes.hover}`} borderBottom={5}>
             <CardContent>
@@ -90,9 +85,9 @@ const ThirdofThird = () => {
         </Grid>
         <Grid container item lg={4} md={4} sm={12}  direction="row" justify="center" alignItems="flex-end">
         <Grid container item lg={12} md={12} sm={12} direction="row" justify="center" alignItems="flex-start">
-              <img src={second} className={classes.iconspc}></img>
+              <img src={icon} className={classes.iconspc}></img>
               </Grid>
-          <Box className={`${classes.container} ${classes.hover}`} borderBottom={5}>
+          <Box className={`${classes.container} ${classes.hover}`} borderBottom={5} textAlign="center">
             <CardContent>
               {/* <img src={hexagon}></img> */}
               <Typography variant="body1" className={classes.text}>
@@ -103,7 +98,7 @@ const ThirdofThird = () => {
         </Grid>
         <Grid container item lg={4} md={4} sm={12} direction="row" justify="center" alignItems="flex-end">
         <Grid container item lg={12} md={12} sm={12} direction="row" justify="center" alignItems="flex-start">
-              <img src={third} className={classes.iconspca}></img>
+              <img src={icon} className={classes.iconspca}></img>
               </Grid>
           <Box className={`${classes.container} ${classes.hover}`} borderBottom={5}>
             <CardContent>
