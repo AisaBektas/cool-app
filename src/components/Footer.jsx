@@ -8,6 +8,7 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import FooterPolygon from '../assets/FooterPolygon.png';
 import text from '../assets/textF.png';
+import textMobile from '../assets/FM.png';
 const useStyles = makeStyles((theme) => ({
   background: {
       backgroundImage: `url(${backgroundImg})`,
@@ -15,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
       backgroundSize: "cover",
-      height: "60vh", 
+      height: "auto", 
       backgroundSize: "100% 100%",
 },
 titleColor: {
@@ -42,19 +43,11 @@ const Footer = () => {
     const classes = useStyles();
     return ( 
     <div className={classes.background}>
-       <Box  bgcolor="background.paper" 
-           position="relative"
-        top="-10%"
-        left="0%"
-        zIndex="tooltip"
-        mx="auto"
-        borderBottom={5} 
-        pl={10}
-        display={{ xs: 'none', md: 'block' }}
-        className={classes.borderColor}>
+       <Box bgcolor="background.paper" position="relative" top="-10%" left="0%" zIndex="tooltip" mx="auto" borderBottom={5} pl={10} display={{ xs: 'none', md: 'block' }} className={classes.borderColor}>
         <Grid container>
             <Grid container item lg={12}  direction="row" alignItems="center">
                 <Grid item lg={6} xs={12} align="left">
+                <Box>
                     <Grid item lg={12}>
                         <Box pl={3} pt={4}>
                          <Typography color="primary">DIVE DEEPER</Typography>
@@ -66,10 +59,12 @@ const Footer = () => {
                 <Grid item lg={12}>               
                     <Box><ExpandMoreIcon  className={classes.color}/></Box>
                 </Grid>
+                </Box>
                 </Grid>
-                <Grid container item lg={6} xs={12} direction="row" justify="center" alignItems="center">
+                <Box>
+                <Grid container item lg={12} xs={6} direction="row" justify="center" alignItems="center">
                 <Grid item lg={6}>
-                <Box className={classes.colorText}>
+                <Box className={classes.colorText} display={{ xs: 'none', lg: 'block' }}>
                         <Box fontWeight="fontWeightBold" fontSize="h6.fontSize">
                         Invalid GPS  
                         </Box>
@@ -82,33 +77,54 @@ const Footer = () => {
                     </Box>
                 </Grid>
                 <Grid item lg={6}>
-                   <Box display={{ xs: 'none', md: 'block' }} color="primary.main">
+                   <Box display={{ xs: 'none', lg: 'block' }}>
                          <CardMedia className={classes.img} align="right" component="img" image={FooterPolygon}></CardMedia>
                     </Box>
                 </Grid>
                 </Grid>
+                </Box>
             </Grid>
         </Grid>
     </Box>
-    <Box  display={{ xs: 'none', md: 'block' }}>
-        <Container>
-        <Grid container direction="row" justify="space-between" alignItems="flex-end">
-            <Grid container item lg={12}>
-                <Grid item lg={6}>
-                    <Typography variant="body1" className={classes.titleColor}>© COMPANY  Privacy policy</Typography>
+    <Box bgcolor="background.paper" position="relative" top="-10%" left="0%" zIndex="tooltip" mx="auto" pl={3} borderBottom={5} display={{ xs: 'block', md: 'none' }} className={classes.borderColor}>
+        <Grid container>
+            <Grid container item lg={12}  direction="row" alignItems="center">
+                <Grid item lg={6} xs={12} align="left">
+                <Box>
+                    <Grid item lg={12}>
+                        <Box pl={3} pt={4}>
+                         <Typography color="primary">DIVE DEEPER</Typography>
+                        </Box>
+                    </Grid>
+                <Grid item lg={12}>
+                    <Box  display={{ xs: 'block', md: 'none' }} pt={6}><img src={textMobile}></img></Box>
                 </Grid>
-            <Grid item lg={6} className={classes.titleColor}>
-                <Typography>
-                    <LinkedInIcon/>
-                    <FacebookIcon/>
-                    <TwitterIcon/>
-                </Typography>
-            </Grid>
+                <Grid item lg={12}>               
+                    <Box><ExpandMoreIcon  className={classes.color}/></Box>
+                </Grid>
+                </Box>
+                </Grid>
             </Grid>
         </Grid>
-    </Container>
     </Box>
-
+    
+    <Box width="80%" mx="auto">
+    <Grid container>
+        <Grid container item lg={12} direction="row" justify="space-between"> 
+        <Box  display={{ xs: 'none', md: 'block' }} >
+        <Typography variant="body1" className={classes.titleColor}>© COMPANY  Privacy policy</Typography>
+        </Box>
+        <Box  display={{ xs: 'block', md: 'none' }} >
+        <Typography variant="body1" className={classes.titleColor}>© AMODO  Privacy policy</Typography>
+        </Box>
+        <Typography className={classes.titleColor}>
+            <LinkedInIcon/>
+            <FacebookIcon/>
+            <TwitterIcon/>
+        </Typography>
+        </Grid>
+    </Grid>
+    </Box>
     </div> );
 }
  

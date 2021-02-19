@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: "4%" 
 },
 top: {
-  paddingTop: "8%"
+  paddingTop: "5%"
 },
 iconspc: {
   position: "relative",
@@ -73,7 +73,7 @@ const ThirdofThird = () => {
             <Grid container lg={12}>
         <Grid container item lg={4} md={4} sm={12} direction="row" justify="center" alignItems="flex-end">
         <Grid container item lg={12} md={12} sm={12} direction="row" justify="center" alignItems="flex-start">
-              <img src={icon} className={classes.iconspc}></img>
+             <Box display={{ xs: 'none', lg: 'block' }}><img src={icon} className={classes.iconspc}></img></Box>
               </Grid>
           <Box className={`${classes.container} ${classes.hover}`} borderBottom={5}>
             <CardContent>
@@ -85,7 +85,7 @@ const ThirdofThird = () => {
         </Grid>
         <Grid container item lg={4} md={4} sm={12}  direction="row" justify="center" alignItems="flex-end">
         <Grid container item lg={12} md={12} sm={12} direction="row" justify="center" alignItems="flex-start">
-              <img src={icon} className={classes.iconspc}></img>
+             <Box display={{ xs: 'none', lg: 'block' }}> <img src={icon} className={classes.iconspc}></img></Box>
               </Grid>
           <Box className={`${classes.container} ${classes.hover}`} borderBottom={5} textAlign="center">
             <CardContent>
@@ -98,7 +98,7 @@ const ThirdofThird = () => {
         </Grid>
         <Grid container item lg={4} md={4} sm={12} direction="row" justify="center" alignItems="flex-end">
         <Grid container item lg={12} md={12} sm={12} direction="row" justify="center" alignItems="flex-start">
-              <img src={icon} className={classes.iconspca}></img>
+              <Box display={{ xs: 'none', lg: 'block' }}><img src={icon} className={classes.iconspca}></img></Box>
               </Grid>
           <Box className={`${classes.container} ${classes.hover}`} borderBottom={5}>
             <CardContent>

@@ -4,6 +4,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import image from '../assets/image.png';
 import Header from '../components/Header';
 import IntroContent from '../components/IntroContent';
+import {
+  Box} from '@material-ui/core';
 // import icon from "../assets/icon.png"; ne znam je staviti preko background image
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -14,17 +16,33 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: "cover",
     // position: "relative",
   },
-  icon: {
-    paddingTop: "90vh"
+  rootxs: {
+    backgroundImage: `url(${image})`,
+    height: "30vh",
+    backgroundSize: "100% 100%",
+    // backgroundPosition: "center",
+    // backgroundRepeat: "no-repeat",
+    // background: `linear-gradient(to top, rgba(255,255,255,255) 50%, transparent 0%), url(${image})`,
+  },
+  text: {
+    minHeight: "70vh"
   }
 }));
 
 const Intro = () => {
     const classes = useStyles();
     return (
-        <div className={classes.root}>
+        <div>
+        <Box display={{ xs: 'none', sm: 'block' }} className={classes.root}>
          <Header/>
          <IntroContent/>
+         </Box>
+         <Box display={{ xs: 'block', sm: 'none' }} className={classes.rootxs}>
+         <Header/>
+           </Box>
+        <Box display={{ xs: 'block', sm: 'none' }} className={classes.text}>
+          <IntroContent/>
+        </Box>
         </div>
       );
 }

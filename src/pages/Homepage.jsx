@@ -4,7 +4,6 @@ import FourthPart from '../components/FourthPart';
 import Intro from '../components/Intro';
 import SecondPart from '../components/SecondPart'
 import ThirdPart from '../components/ThirdPart';
-import Proba from '../components/Proba';
 const Homepage = () => {
     return (
         <div>
@@ -13,7 +12,6 @@ const Homepage = () => {
             <ThirdPart/>
             <FourthPart/>
             <Footer/>
-            {/* <Proba/> */}
         </div>
     )
 }

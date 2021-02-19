@@ -49,7 +49,7 @@ const FirstofThird = () => {
           Cost Efficient Distribution through Digital Channels
           </Typography>
           </Grid>
-          <Grid container item lg={12} direction="row" justify="center" alignItems="baseline">
+          <Grid container item lg={12} direction="row" justify="center" alignItems="center">
           <Typography variant="body1" className={classes.subtitle}>
           Distribute your insurance products directly through digital (smartphone) channels
           </Typography>
