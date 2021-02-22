@@ -2,9 +2,10 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import backgroundImg from '../assets/FooterImage.png';
 import {Container, Box, Grid, Typography, CardMedia} from '@material-ui/core';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import TwitterIcon from '@material-ui/icons/Twitter';
+// import LinkedInIcon from '@material-ui/icons/LinkedIn';
+// import FacebookIcon from '@material-ui/icons/Facebook';
+// import TwitterIcon from '@material-ui/icons/Twitter';
+import SharedFooter from '../components/FooterShare';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import FooterPolygon from '../assets/FooterPolygon.png';
 import text from '../assets/textF.png';
@@ -16,17 +17,22 @@ const useStyles = makeStyles((theme) => ({
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
       backgroundSize: "cover",
-      height: "auto", 
-      backgroundSize: "100% 100%",
+      maxHeight: "auto", 
+      backgroundSize: "100% 100%"
 },
 titleColor: {
     color: "#fff"
 },
 borderColor: {
-    borderColor: " #B4E0E0",
+    borderColor: " #B4E0E9",
     maxWidth: "80%",
     alignSelf: "center"
 },
+hover: {
+    '&:hover': {
+      borderColor: "#D5BB78",
+   },
+  },
 img: {
     maxHeight: "500px",
     maxWidth: "300px"
@@ -43,7 +49,7 @@ const Footer = () => {
     const classes = useStyles();
     return ( 
     <div className={classes.background}>
-       <Box bgcolor="background.paper" position="relative" top="-10%" left="0%" zIndex="tooltip" mx="auto" borderBottom={5} pl={10} display={{ xs: 'none', md: 'block' }} className={classes.borderColor}>
+       <Box bgcolor="background.paper" position="relative" top="-10%" left="0%" zIndex="tooltip" mx="auto" borderBottom={5} pl={10} display={{ xs: 'none', md: 'block' }} className={`${classes.borderColor} ${classes.hover}`}>
         <Grid container>
             <Grid container item lg={12}  direction="row" alignItems="center">
                 <Grid item lg={6} xs={12} align="left">
@@ -86,7 +92,7 @@ const Footer = () => {
             </Grid>
         </Grid>
     </Box>
-    <Box bgcolor="background.paper" position="relative" top="-10%" left="0%" zIndex="tooltip" mx="auto" pl={3} borderBottom={5} display={{ xs: 'block', md: 'none' }} className={classes.borderColor}>
+    <Box bgcolor="background.paper" position="relative" top="-10%" left="0%" zIndex="tooltip" mx="auto" pl={3} borderBottom={5} display={{ xs: 'block', md: 'none' }} className={`${classes.borderColor} ${classes.hover}`}>
         <Grid container>
             <Grid container item lg={12}  direction="row" alignItems="center">
                 <Grid item lg={6} xs={12} align="left">
@@ -108,22 +114,8 @@ const Footer = () => {
         </Grid>
     </Box>
     
-    <Box width="80%" mx="auto">
-    <Grid container>
-        <Grid container item lg={12} direction="row" justify="space-between"> 
-        <Box  display={{ xs: 'none', md: 'block' }} >
-        <Typography variant="body1" className={classes.titleColor}>© COMPANY  Privacy policy</Typography>
-        </Box>
-        <Box  display={{ xs: 'block', md: 'none' }} >
-        <Typography variant="body1" className={classes.titleColor}>© AMODO  Privacy policy</Typography>
-        </Box>
-        <Typography className={classes.titleColor}>
-            <LinkedInIcon/>
-            <FacebookIcon/>
-            <TwitterIcon/>
-        </Typography>
-        </Grid>
-    </Grid>
+    <Box width="80%" mx="auto" className={classes.titleColor}>
+        <SharedFooter/>
     </Box>
     </div> );
 }

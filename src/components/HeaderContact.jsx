@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
     textTransform: "uppercase",
-    color: "#fff"
+    color: "#212A39"
   },
   contactButton: {
     backgroundColor: theme.palette.success.main,
@@ -28,8 +28,6 @@ const useStyles = makeStyles((theme) => ({
   contactLink: {
     textDecoration: "none",
     color: "#212A39"
-    // marginLeft: "3%",
-    // marginRight: "3%"
   },
   fontSize: {
     fontSize: "30px",
@@ -106,21 +104,21 @@ const Header = () => {
         <div className={classes.root}>
           <Box display={{ xs: 'none', sm: 'block' }}>
             <Toolbar position="absolute">
-              <Typography variant="h6" className={classes.title} align="left">
-                {/* <img src={logo} ></img> */}
-                <Box fontWeight="fontWeightBold" className={classes.title} fontSize="h5.fontSize" letterSpacing={5} textAlign="left">
+              {/* <Typography variant="h6" className={classes.title} align="left">
+                COMPANY
+              </Typography> */}
+              <Box fontWeight="fontWeightBold" className={classes.title} fontSize="h5.fontSize" letterSpacing={5} textAlign="left">
          COMPANY
                 </Box>
-              </Typography>
               <Tooltip title="Home" interactive>
               <Link to="/" className={classes.contactLink}>
-                <Button color="secondary">Home</Button>
+                <Button>Home</Button>
                 </Link>
               </Tooltip>
               <Tooltip title="Platform" interactive>
               <Link to="/" className={classes.contactLink}>
-                <Button aria-controls="fade-menu" aria-haspopup="true" onClick={handleClickOne} color="secondary">Platform</Button>
-                </Link>
+                <Button aria-controls="fade-menu" aria-haspopup="true" onClick={handleClickOne}>Platform</Button>
+              </Link>
               </Tooltip>
                   <Menu id="fade-menu" anchorEl={anchorEle} keepMounted open={open} onClose={handleCloseOne} TransitionComponent={Fade}>
                     <MenuItem onClick={handleCloseOne}>ACQUIRE</MenuItem>
@@ -130,42 +128,44 @@ const Header = () => {
                   </Menu>
               <Tooltip title="Insights" interactive>
               <Link to="/" className={classes.contactLink}>
-                <Button color="secondary">Insights</Button>
-                </Link>
+                <Button>Insights</Button>
+              </Link>
               </Tooltip>
               <ThemeProvider theme={themeTwo}>
               <Box mx={{ md: 3, lg: 4 }}>
               <Link to="/Contact" className={classes.contactLink}>
               <Tooltip title="Get in Touch">
-                <Button variant="contained" color="primary">Get in touch</Button>
+              <Box border={1} borderColor="primary.main" px={2}>
+                <Button color="primary">Get in touch</Button>
+                </Box>
               </Tooltip>
               </Link>
               </Box>
               </ThemeProvider>
               <Tooltip title="Deutch" interactive>
               <Link to="/" className={classes.contactLink}>
-                <Button color="secondary">Deutch</Button>
-              </Link>
+                <Button>Deutch</Button>
+                </Link>
               </Tooltip>
             </Toolbar>
           </Box>
           <Box display={{ xs: 'block', sm: 'none' }}>
             <Toolbar position="absolute">
-              <Typography variant="h6" className={classes.title} align="left">
-                {/* <img src={logo} ></img> */}
-                <Box fontWeight="fontWeightBold" className={classes.title} fontSize="h5.fontSize" letterSpacing={5} textAlign="left">
+            <Box fontWeight="fontWeightBold" className={classes.title} fontSize="h5.fontSize" letterSpacing={5} textAlign="left">
          COMPANY
                 </Box>
-              </Typography>
+              {/* <Typography variant="h6" className={classes.title} align="left">
+               COMPANY
+              </Typography> */}
               <Typography variant="h6" className={classes.title} align="right">
-                <Button aria-controls="customized-menu" aria-haspopup="true" color="secondary" onClick={handleClick}>
+                <Button aria-controls="customized-menu" aria-haspopup="true" onClick={handleClick}>
                   <MenuIcon/>
                 </Button>
               <StyledMenu id="customized-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
                 <Box px={3} pt={3} pb={6}>
                   <Grid container item lg={12} direction="row" justify="space-between"> 
                     {/* <img src={LogoMobile}></img> */}
-                    <Box fontWeight="fontWeightBold" className={classes.contactLink} fontSize="h6.fontSize" textAlign="left">
+                    <Box fontWeight="fontWeightBold" className={classes.title} fontSize="h6.fontSize" textAlign="left">
          COMPANY
                 </Box>
                     <CloseIcon  onClick={handleClose}/>

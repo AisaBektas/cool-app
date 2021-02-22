@@ -2,7 +2,14 @@ import { Box, Container, CssBaseline, Typography, Grid } from '@material-ui/core
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import hexagon from '../assets/hexfinally.png';
+import polygon from '../assets/Polygon.png';
 const useStyles = makeStyles((theme) => ({
+    // background: {
+    //     // background: `linear-gradient(to left, rgba(255, 255, 255, 255)), url(${polygon})`,
+    //     backgroundImage: `url(${polygon})`,
+    //     backgroundSize: "100% 100%" ,
+    //     backgroundColor: "#aaa"
+    // },
     titleColor: {
         color: "#17A4A4",
     },

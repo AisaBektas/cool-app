@@ -2,7 +2,13 @@ import { Box, Container, CssBaseline, Typography, Grid } from '@material-ui/core
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import hexagon from '../assets/hexfinally.png';
+import polygon from '../assets/Polygon2.png';
 const useStyles = makeStyles((theme) => ({
+    background: {
+        backgroundImage: `url(${polygon})`,
+        backgroundSize: "45% 100%",
+        backgroundRepeat: "no-repeat"
+    },
     titleColor: {
         color: "#17A4A4",
     },
@@ -24,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
 const Section = () => {
     const classes = useStyles();
     return ( 
-        <div>
+        <div className={classes.background}>
         <Box display="flex" justifyContent="center" width="40%" mx="auto" pt={10} pb={7}>
         <Typography variant="h6"  className={classes.titleColor}>
          But there is a smart way of taking Big data even further and Amodo has it ready for you. Read on.
