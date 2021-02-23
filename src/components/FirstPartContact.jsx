@@ -16,12 +16,22 @@ const FirstPartContact = () => {
     const classes = useStyles();
     return ( 
         <div>
-            <Box align="left">
+            <Box align="left" m={3}>
+            <Box display={{ xs: 'none', sm: 'block' }} >
                 <Box fontWeight="fontWeightBold" className={classes.subColor} fontSize="h2.fontSize" textAlign="left">
                     Let's get
                 </Box>
                 <Box mt={-7} fontWeight="fontWeightBold" className={classes.mainColor} fontSize="h1.fontSize" textAlign="left">
                     in touch
+                </Box>
+                </Box>
+                <Box display={{ xs: 'block', sm: 'none' }} >
+                <Box fontWeight="fontWeightBold" className={classes.subColor} fontSize="h4.fontSize" textAlign="left">
+                    Let's get
+                </Box>
+                <Box mt={-5} fontWeight="fontWeightBold" className={classes.mainColor} fontSize="h3.fontSize" textAlign="left">
+                    in touch
+                </Box>
                 </Box>
                 <Box className={classes.green} fontSize="h6.fontSize" my={2}>
                     OFFICES

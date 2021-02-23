@@ -91,8 +91,8 @@ const SecondofThird = () => {
                       <Grid container item lg={4}>
                         <Box pl={5} my="auto" mx="auto">
                           <Box pb={2} fontWeight="fontWeightBold" textAlign="left" fontSize="h5.fontSize" className={classes.text}>Situational products do perform</Box>
-                          <Box align="left" variant="body1" className={classes.textParagraph}>Based on behaviour, recognize the opportunity and grab the initiative.</Box>
-                          <Box pt={2} align="left" variant="body1" className={classes.textParagraph}>You can anticipate customers intentions and immediately offer the proper insurance product.</Box>
+                          <Box align="left" fontSize={16} className={classes.textParagraph}>Based on behaviour, recognize the opportunity and grab the initiative.</Box>
+                          <Box pt={2} align="left" fontSize={16} className={classes.textParagraph}>You can anticipate customers intentions and immediately offer the proper insurance product.</Box>
                         </Box>
                       </Grid>
                       <Grid container item lg={4}>
