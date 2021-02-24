@@ -81,7 +81,7 @@ const SecondofThird = () => {
                       </Grid>
                     </Grid>
                   </Box>
-                  <Box px={10} display={{ xs: 'block', md: 'none' }} mx="auto">
+                  <Box display={{ xs: 'block', md: 'none' }} mx="auto">
                   <BoxOne/>
                   </Box>
                   </Box>
@@ -105,7 +105,7 @@ const SecondofThird = () => {
                       </Grid>
                     </Grid>
                   </Box>
-                  <Box px={10} display={{ xs: 'block', md: 'none' }} mx="auto">
+                  <Box display={{ xs: 'block', md: 'none' }} mx="auto">
                   <BoxTwo/>
                   </Box>
                   </Box>

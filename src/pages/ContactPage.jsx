@@ -7,7 +7,6 @@ import FirstPartContact from '../components/FirstPartContact';
 import SecondPartContact from '../components/SecondPartContact';
 import SharedFooter from '../components/FooterShare';
 import backgroundMobile from '../assets/backgroundMobile.png';
-import Proba from '../components/Proba';
 const useStyles = makeStyles((theme) => ({
     background: {
         backgroundImage: `url(${polygonContact})`,

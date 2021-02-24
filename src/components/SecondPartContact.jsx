@@ -7,7 +7,8 @@ import MuiDialogContent from '@material-ui/core/DialogContent'
 import * as yup from 'yup';
 import {Button, TextField, Checkbox, Dialog, DialogContentText} from '@material-ui/core';
 import backgroundMobile from '../assets/backgroundMobile.png';
-
+import envelope from '../assets/envelopet.png';
+import message from '../assets/checkicon.png';
 const validationSchema = yup.object({
     fullname: yup
     .string('Enter your full name')
@@ -62,18 +63,19 @@ const SecondPartContact = () => {
         validationSchema: validationSchema,
         onSubmit: (values, {setSubmitting, resetForm}) => {
           setTimeout(() => {
-            setOpen(true);
+           setOpen(true);
              console.log((JSON.stringify(values, null, 2)));
              resetForm();
              setSubmitting(false);
-          })
+          }, 4000)
       }});
     const classes = useStyles();
     return ( 
         <div>
+           <Box display={{xs: 'none', sm: 'none', md: 'none', lg: 'block'}} align="left" mt={-4} ml={-3.5}><img src={envelope}></img></Box>
             <Box align="center" mx="auto" my={4} width="80%" className={classes.text}>
             <form onSubmit={formik.handleSubmit}>
-            <Box pt={3} pb={1} align="left" fontSize={16} fontWeight="fontWeightBold">Full name</Box>
+            <Box align="left" fontSize={16} fontWeight="fontWeightBold">Full name</Box>
             <Box>
             <TextField
             className={classes.color}
@@ -124,18 +126,21 @@ const SecondPartContact = () => {
         </Box>
         <Box pt={3} align="left" fontSize={14} className={classes.otherColor}>Company will use provided information for the purposes of sending the requested information, send product and service promotions and announce company news to you.  Company will maintain a record of data until you revoke the consent that you have given.</Box>
         <Box pt={3} align="left" fontSize={14} fontWeight="fontWeightBold">
-        <Checkbox d="acceptedTerms" name="acceptedTerms" checked={formik.values.acceptedTerms} onChange={formik.handleChange} required
-          // error={formik.touched.acceptedTerms && Boolean(formik.errors.acceptedTerms)}
+        <Checkbox id="acceptedTerms" name="acceptedTerms" checked={formik.values.acceptedTerms} required onChange={formik.handleChange} 
+        // errors={formik.touched.acceptedTerms && Boolean(formik.errors.acceptedTerms)}
           // helperText={formik.touched.acceptedTerms && formik.errors.acceptedTerms}
       />I agree
         </Box>
         <Box pt={2}>
-        <Button color="primary" variant="contained" fullWidth type="submit">Send Message</Button>
+        <Button color="primary" variant="contained" fullWidth type="submit" disabled={formik.isSubmitting}>
+        {formik.isSubmitting ? 'Sending...' : 'Send Message'}
+        </Button>
         </Box>
       </form>
             </Box>
             <Dialog open={open} onClose={handleClose}>
         <DialogContent>
+        <Box display={{xs: 'none', sm: 'none', md: 'none', lg: 'block'}} position="absolute" top={2} left={3} zIndex="tooltip"><img src={message}></img></Box>
         <Box pt={{xs: 0, lg: 10}} px={{ xs: 0, lg: 10}} pb={{xs: 0, lg: 4}}>
           <DialogContentText>
           <Box align="center" fontSize="h4.fontSize" fontWeight="fontWeightBold" className={classes.dialogTitle}>Thank you for reaching out to us!</Box>

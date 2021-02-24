@@ -38,7 +38,10 @@ const StyledMenu = withStyles({
   paper: {
     border: '1px solid #d3d4d5',
     height: "100vh",
-    width: "100%",
+    width: "100vw",
+    padding: 0,
+    margin: 0,
+    zIndex: 10,
     backgroundImage: `url(${Background})`,
   },
 })((props) => (

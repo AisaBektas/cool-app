@@ -33,6 +33,9 @@ const useStyles = makeStyles((theme) => ({
     color: {
       color: "#fff"
     },
+    specialColor: {
+      color: "#929FAD"
+    },
   contactLink: {
     textDecoration: "none"
   },
@@ -63,7 +66,15 @@ export default function SimpleContainer() {
         <Grid item xs={1}>
         </Grid>
         <Grid item xs={9} align="left">
-        <img  className={classes.special} src={Logo}></img>
+        <Box pl={{ sm: 3, lg: 7}}>
+        <Box fontWeight="fontWeightBold" fontSize="h2.fontSize"  className={classes.specialColor}>
+          Perfect
+        </Box>
+        <Box fontWeight="fontWeightBold" fontSize="h1.fontSize" mt={-9} className={classes.color}>
+          Insurance
+        </Box>
+        </Box>
+        {/* <img  className={classes.special} src={Logo}></img> */}
         <ThemeProvider theme={theme}>
         <CardContent className={classes.special}>
           <Typography  variant="h5" color="primary">

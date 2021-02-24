@@ -141,7 +141,7 @@ const FourthPart = () => {
                     </Typography>
                 </Box>
                 </Grid>
-                <Box display={{ xs: 'none', sm: 'none', md: 'block', xl: 'block' }} pl={10}>
+                <Box display={{ xs: 'none', sm: 'none', md: 'block', xl: 'block' }} pl={{md: 1,lg: 10}}>
                 <Grid item lg={6}>
                 <img src={Last}></img>
                 </Grid>
